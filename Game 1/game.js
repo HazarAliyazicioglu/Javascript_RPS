@@ -27,7 +27,7 @@ if (playGame) {
             alert("You didn't write rock paper or scissors");
         }
     }else{
-        alert("I guess ypu changed your mind. Maybe next time");
+        alert("I guess you changed your mind. Maybe next time");
     }
 
 }else{
