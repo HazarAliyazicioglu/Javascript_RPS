@@ -9,20 +9,28 @@ if (playGame) {
             let computerChoice = Math.floor(Math.random() * 3 + 1)
             let computer = computerChoice === 1 ? "rock" : computerChoice === 2 ? "paper" : "scissors" ;
             if (playerOne === computer) {
-                alert("Draw")
+                var result = "Draw"
             } else if (playerOne === "rock" &&  computer === "paper") {
-                alert("You lost");
+                var result = "Lost"
+                
             } else if (playerOne === "rock" &&  computer === "scissors") {
-                alert("You won");
+                var result = "Won"
+                
             } else if (playerOne === "paper" &&  computer === "rock") {
-                alert("You won");
+                var result = "Won"
+                
             } else if (playerOne === "paper" &&  computer === "scissors") {
-                alert("You lost");
+                var result = "Lost"
+                
             } else if (playerOne === "scissors" &&  computer === "paper") {
-                alert("You won");
-            } else {
-                alert("You lost");
+                var result = "Won"
+                
+            } else if (playerOne === "scissors" && computer ==="rock") {
+                var result = "Lost"
             }
+            alert(result);
+            let playAgain = confirm("Play Again?");
+            playAgain ? location.reload() : alert ("Ok, thanks for playing.");
         }else{
             alert("You didn't write rock paper or scissors");
         }
